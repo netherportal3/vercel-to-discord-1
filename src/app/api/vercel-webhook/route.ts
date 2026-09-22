@@ -4,7 +4,7 @@ import { VercelWebhookEvent } from '../../../types';
 
 const { WEBHOOK_INTEGRATION_SECRET, DISCORD_WEBHOOK_URL } = process.env;
 
-export const POST = async (req: Request, res: Response) => {
+export const POST = async (req: Request) => {
 
     if (typeof WEBHOOK_INTEGRATION_SECRET != 'string') {
         throw new Error('No integration secret found');
